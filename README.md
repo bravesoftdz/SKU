@@ -1,6 +1,6 @@
 ![SKU logo](https://www.skuchain.vip/images/Skuchain-Curiosity-d.png)
 
-_\* trademark
+
 # Skuchain - SKU
 *Delphi REST Library*
 
