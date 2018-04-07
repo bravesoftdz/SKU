@@ -1,7 +1,7 @@
 ![SKU logo](https://www.skuchain.vip/images/Skuchain-Curiosity-d.png)
 
 
-# Skuchain - SKU
+# SKU
 *Delphi REST Library*
 
 Build your REST applications (server and client) with my library:
