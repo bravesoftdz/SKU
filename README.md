@@ -1,7 +1,7 @@
-![Skuchain-curiosity logo](https://www.skuchain.vip/images/Skuchain-Curiosity-d.png)
+![SKU logo](https://www.skuchain.vip/images/Skuchain-Curiosity-d.png)
 
 _\* trademark
-# Skuchain - Curiosity
+# Skuchain - SKU
 *Delphi REST Library*
 
 Build your REST applications (server and client) with my library:
