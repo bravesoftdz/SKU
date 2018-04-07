@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6E23DEFF-F737-42C3-B8AD-2549B8F67C93}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="SkuchainTemplateServerApplication.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SkuchainTemplateServerFMXApplication.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SkuchainTemplateServerService.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SkuchainTemplateServerConsoleApplication.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SkuchainTemplateServerDaemon.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SkuchainTemplateServerApacheModule.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SkuchainTemplateServerISAPI.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SkuchainTemplateClient.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SkuchainTemplateServerApplication">
+        <MSBuild Projects="SkuchainTemplateServerApplication.dproj"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerApplication:Clean">
+        <MSBuild Projects="SkuchainTemplateServerApplication.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerApplication:Make">
+        <MSBuild Projects="SkuchainTemplateServerApplication.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerFMXApplication">
+        <MSBuild Projects="SkuchainTemplateServerFMXApplication.dproj"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerFMXApplication:Clean">
+        <MSBuild Projects="SkuchainTemplateServerFMXApplication.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerFMXApplication:Make">
+        <MSBuild Projects="SkuchainTemplateServerFMXApplication.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerService">
+        <MSBuild Projects="SkuchainTemplateServerService.dproj"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerService:Clean">
+        <MSBuild Projects="SkuchainTemplateServerService.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerService:Make">
+        <MSBuild Projects="SkuchainTemplateServerService.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerConsoleApplication">
+        <MSBuild Projects="SkuchainTemplateServerConsoleApplication.dproj"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerConsoleApplication:Clean">
+        <MSBuild Projects="SkuchainTemplateServerConsoleApplication.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerConsoleApplication:Make">
+        <MSBuild Projects="SkuchainTemplateServerConsoleApplication.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerDaemon">
+        <MSBuild Projects="SkuchainTemplateServerDaemon.dproj"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerDaemon:Clean">
+        <MSBuild Projects="SkuchainTemplateServerDaemon.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerDaemon:Make">
+        <MSBuild Projects="SkuchainTemplateServerDaemon.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerApacheModule">
+        <MSBuild Projects="SkuchainTemplateServerApacheModule.dproj"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerApacheModule:Clean">
+        <MSBuild Projects="SkuchainTemplateServerApacheModule.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerApacheModule:Make">
+        <MSBuild Projects="SkuchainTemplateServerApacheModule.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerISAPI">
+        <MSBuild Projects="SkuchainTemplateServerISAPI.dproj"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerISAPI:Clean">
+        <MSBuild Projects="SkuchainTemplateServerISAPI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainTemplateServerISAPI:Make">
+        <MSBuild Projects="SkuchainTemplateServerISAPI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SkuchainTemplateClient">
+        <MSBuild Projects="SkuchainTemplateClient.dproj"/>
+    </Target>
+    <Target Name="SkuchainTemplateClient:Clean">
+        <MSBuild Projects="SkuchainTemplateClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainTemplateClient:Make">
+        <MSBuild Projects="SkuchainTemplateClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SkuchainTemplateServerApplication;SkuchainTemplateServerFMXApplication;SkuchainTemplateServerService;SkuchainTemplateServerConsoleApplication;SkuchainTemplateServerDaemon;SkuchainTemplateServerApacheModule;SkuchainTemplateServerISAPI;SkuchainTemplateClient"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SkuchainTemplateServerApplication:Clean;SkuchainTemplateServerFMXApplication:Clean;SkuchainTemplateServerService:Clean;SkuchainTemplateServerConsoleApplication:Clean;SkuchainTemplateServerDaemon:Clean;SkuchainTemplateServerApacheModule:Clean;SkuchainTemplateServerISAPI:Clean;SkuchainTemplateClient:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SkuchainTemplateServerApplication:Make;SkuchainTemplateServerFMXApplication:Make;SkuchainTemplateServerService:Make;SkuchainTemplateServerConsoleApplication:Make;SkuchainTemplateServerDaemon:Make;SkuchainTemplateServerApacheModule:Make;SkuchainTemplateServerISAPI:Make;SkuchainTemplateClient:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
