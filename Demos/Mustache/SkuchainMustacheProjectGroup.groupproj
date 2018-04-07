@@ -1,0 +1,96 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6E23DEFF-F737-42C3-B8AD-2549B8F67C93}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="SkuchainMustacheServerApplication.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SkuchainMustacheServerFMXApplication.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SkuchainMustacheServerService.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SkuchainMustacheServerConsoleApplication.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SkuchainMustacheServerApacheModule.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SkuchainMustacheServerISAPI.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SkuchainMustacheServerApplication">
+        <MSBuild Projects="SkuchainMustacheServerApplication.dproj"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerApplication:Clean">
+        <MSBuild Projects="SkuchainMustacheServerApplication.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerApplication:Make">
+        <MSBuild Projects="SkuchainMustacheServerApplication.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerFMXApplication">
+        <MSBuild Projects="SkuchainMustacheServerFMXApplication.dproj"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerFMXApplication:Clean">
+        <MSBuild Projects="SkuchainMustacheServerFMXApplication.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerFMXApplication:Make">
+        <MSBuild Projects="SkuchainMustacheServerFMXApplication.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerService">
+        <MSBuild Projects="SkuchainMustacheServerService.dproj"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerService:Clean">
+        <MSBuild Projects="SkuchainMustacheServerService.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerService:Make">
+        <MSBuild Projects="SkuchainMustacheServerService.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerConsoleApplication">
+        <MSBuild Projects="SkuchainMustacheServerConsoleApplication.dproj"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerConsoleApplication:Clean">
+        <MSBuild Projects="SkuchainMustacheServerConsoleApplication.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerConsoleApplication:Make">
+        <MSBuild Projects="SkuchainMustacheServerConsoleApplication.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerApacheModule">
+        <MSBuild Projects="SkuchainMustacheServerApacheModule.dproj"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerApacheModule:Clean">
+        <MSBuild Projects="SkuchainMustacheServerApacheModule.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerApacheModule:Make">
+        <MSBuild Projects="SkuchainMustacheServerApacheModule.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerISAPI">
+        <MSBuild Projects="SkuchainMustacheServerISAPI.dproj"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerISAPI:Clean">
+        <MSBuild Projects="SkuchainMustacheServerISAPI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SkuchainMustacheServerISAPI:Make">
+        <MSBuild Projects="SkuchainMustacheServerISAPI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SkuchainMustacheServerApplication;SkuchainMustacheServerFMXApplication;SkuchainMustacheServerService;SkuchainMustacheServerConsoleApplication;SkuchainMustacheServerApacheModule;SkuchainMustacheServerISAPI"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SkuchainMustacheServerApplication:Clean;SkuchainMustacheServerFMXApplication:Clean;SkuchainMustacheServerService:Clean;SkuchainMustacheServerConsoleApplication:Clean;SkuchainMustacheServerApacheModule:Clean;SkuchainMustacheServerISAPI:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SkuchainMustacheServerApplication:Make;SkuchainMustacheServerFMXApplication:Make;SkuchainMustacheServerService:Make;SkuchainMustacheServerConsoleApplication:Make;SkuchainMustacheServerApacheModule:Make;SkuchainMustacheServerISAPI:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
